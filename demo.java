@@ -1,8 +1,16 @@
 class Demo {
-		public static void main(String args[]) {
-			System.out.println("hoi");
-	//test
-	System.out.println("wijziging");
-	/
-		}
+	public static void main(String args[]) {
+	zomaar (55);
+	}
+	
+	static void zomaar(int getal) {
+		System.out.println();
+	}
+	static void doemaar(Pizza dePizza) {
+	
+	}
+}
+
+class Pizza {
+	int prijs = 14;
 }
