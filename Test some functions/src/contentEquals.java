@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import java.io.File;
 
 public class contentEquals {
 			
@@ -10,8 +7,7 @@ public class contentEquals {
 	Scanner scan;
 
 		public contentEquals () {
-			this.zin1 = zin1;
-			this.zin2 = zin2;
+			
 		}
 		
 		void runContentEquals () {
@@ -24,32 +20,19 @@ public class contentEquals {
 		}
 			
 		static void Antwoord (String zin1, String zin2) {
-			File wahWah = new File("wahwah.wav");
-			File victory = new File("owin31.wav");
+			soundEffects sound = new soundEffects();
 			
 			if (zin1.contentEquals(zin2)) {
 				System.out.println("hoera, exact eender!\n");
-				PlaySound(victory);
+				sound.good();
 			} else {
 				System.out.println("hoera, exact verschillend!\n");
-				PlaySound(wahWah);
+				sound.bad();
 			}
 			
 		}
-			
-		static void PlaySound(File Sound) {
-			try {
-				Clip clip = AudioSystem.getClip();
-				clip.open(AudioSystem.getAudioInputStream(Sound));
-				clip.start();
-				
-				Thread.sleep(clip.getMicrosecondLength()/1000);
-				
-			} catch (Exception e) {
-			}
-		}
-	}
-
+}
+		
 
 
 
